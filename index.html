@@ -24,7 +24,10 @@ nav a{color:var(--ink);text-decoration:none;font:500 10px Montserrat;letter-spac
 .reception{padding:0;background:var(--green);color:white}.reception-grid{display:grid;grid-template-columns:1.25fr .75fr;align-items:center}.reception-photo{background:#e9e0d0}.reception-photo img{display:block;width:100%;height:auto}.reception-copy{text-align:center;padding:65px 7vw}.reception-copy h2{font:400 70px "Great Vibes";margin:5px}.reception-copy p{font-size:21px;line-height:1.5}.reception-copy .btn{background:#fff;color:var(--green)}
 .count{background:#26382b;color:white;text-align:center}.count .heading h2{color:white}.clock{display:flex;justify-content:center;gap:18px;flex-wrap:wrap}.unit{width:145px;border:1px solid #ffffff55;padding:25px 8px}.num{font-size:52px}.lab{font:400 9px Montserrat;letter-spacing:.16em;text-transform:uppercase;color:#e6d9c3}
 .info-grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{text-align:center;padding:45px 28px;background:var(--paper);border:1px solid #e4d7c2}.card h3{font:500 11px Montserrat;letter-spacing:.25em;text-transform:uppercase}.card p{font-size:19px}
-.rsvp{text-align:center;background:var(--paper)}.rsvp p{font-size:22px;max-width:620px;margin:0 auto 22px}.footer{text-align:center;padding:65px 20px;background:var(--green);color:white}.footer b{display:block;font:400 72px "Great Vibes";color:#dfbd7b}
+.rsvp{text-align:center;background:var(--paper)}
+.guest-box{max-width:610px;margin:0 auto 30px;padding:28px 24px;border-block:1px solid var(--line)}
+.guest-name{font:400 43px "Great Vibes";color:var(--green);margin-bottom:8px}
+.guest-seats{font-size:21px;font-style:italic}.rsvp p{font-size:22px;max-width:620px;margin:0 auto 22px}.footer{text-align:center;padding:65px 20px;background:var(--green);color:white}.footer b{display:block;font:400 72px "Great Vibes";color:#dfbd7b}
 .reveal{opacity:0;transform:translateY(48px);filter:blur(4px);transition:opacity 1.05s ease,transform 1.05s cubic-bezier(.2,.7,.2,1),filter 1.05s}.reveal.show{opacity:1;transform:none;filter:none}
 @media(max-width:800px){nav{display:none}.hero{padding-top:0;grid-template-columns:1fr;min-height:0}.hero-copy{min-height:650px;padding:70px 22px}.hero-media{display:block}.section{padding:80px 22px}.split,.reception-grid,.info-grid{grid-template-columns:1fr;gap:38px}.media-frame{border-radius:150px 150px 10px 10px}.reception-copy{padding:70px 24px}.heading h2{font-size:57px}.names{font-size:90px}.unit{width:44%}}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;filter:none;transition:none}}
@@ -43,11 +46,32 @@ nav a{color:var(--ink);text-decoration:none;font:500 10px Montserrat;letter-spac
 
 <section class="section" id="detalles"><div class="heading reveal"><div class="eyebrow">Detalles para nuestro día</div><h2>Información</h2><div class="rule">— ❦ —</div></div><div class="info-grid"><div class="card reveal"><h3>Dress code</h3><p><strong>Estrictamente formal</strong></p></div><div class="card reveal"><h3>Padrinos</h3><p><strong>Leonardo Pacheco</strong><br>&<br><strong>Catalina Faicán</strong></p></div><div class="card reveal"><h3>Con amor y fe</h3><p><em>“Lo que Dios ha unido, que no lo separe el hombre.”</em><br>Mateo 19, 6</p></div></div></section>
 
-<section class="section rsvp" id="rsvp"><div class="heading reveal"><div class="eyebrow">Queremos celebrar contigo</div><h2>Confirma tu asistencia</h2><div class="rule">— ♥ —</div></div><p class="reveal">Tu presencia hará aún más especial este momento.</p><button class="btn reveal" id="confirmar">Confirmar asistencia</button></section>
+<section class="section rsvp" id="rsvp"><div class="heading reveal"><div class="eyebrow">Queremos celebrar contigo</div><h2>Confirma tu asistencia</h2><div class="rule">— ♥ —</div></div>
+<div id="invitacionPersonal" class="guest-box reveal" hidden><div class="guest-name" id="guestName"></div><div class="guest-seats" id="guestSeats"></div></div>
+<p class="reveal">Tu presencia hará aún más especial este momento.</p><button class="btn reveal" id="confirmar">Confirmar asistencia</button></section>
 <footer class="footer"><b>N & D</b><p>24 · 10 · 2026</p></footer>
 <script>
 const target=new Date("2026-10-24T16:00:00-05:00").getTime();
 function tick(){const x=Math.max(0,target-Date.now());document.getElementById("d").textContent=Math.floor(x/86400000);document.getElementById("h").textContent=String(Math.floor(x%86400000/3600000)).padStart(2,"0");document.getElementById("m").textContent=String(Math.floor(x%3600000/60000)).padStart(2,"0");document.getElementById("s").textContent=String(Math.floor(x%60000/1000)).padStart(2,"0")}tick();setInterval(tick,1000);
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("show");io.unobserve(e.target)}}),{threshold:.18,rootMargin:"0px 0px -8% 0px"});document.querySelectorAll(".reveal").forEach(e=>io.observe(e));
-document.getElementById("confirmar").addEventListener("click",()=>window.open("https://wa.me/593992825679?text="+encodeURIComponent("Hola, confirmo mi asistencia a la boda de Narcisa & Diego el 24 de octubre de 2026."),"_blank"));
+const invitados={
+  "mama":{nombre:"Mamá",cupos:2}
+  // Ejemplo: ,"leonardo":{nombre:"Leonardo Pacheco",cupos:2}
+};
+const params=new URLSearchParams(location.search);
+const codigo=(params.get("i")||"").toLowerCase().trim();
+const invitado=invitados[codigo];
+if(invitado){
+  const box=document.getElementById("invitacionPersonal");
+  document.getElementById("guestName").textContent=invitado.nombre;
+  document.getElementById("guestSeats").textContent=invitado.cupos===1
+    ?"Hemos reservado 1 lugar para ti."
+    :"Hemos reservado "+invitado.cupos+" lugares para ustedes.";
+  box.hidden=false;
+}
+document.getElementById("confirmar").addEventListener("click",()=>{
+  let mensaje="Hola, confirmo mi asistencia a la boda de Narcisa & Diego el 24 de octubre de 2026.";
+  if(invitado) mensaje+="\nInvitación: "+invitado.nombre+".\nLugares reservados: "+invitado.cupos+".";
+  window.open("https://wa.me/593992825679?text="+encodeURIComponent(mensaje),"_blank");
+});
 </script></body></html>

@@ -1,0 +1,17 @@
+INVITACIONES PERSONALIZADAS — NARCISA & DIEGO
+
+YA CONFIGURADO:
+Mamá — 2 lugares
+https://narcisaaraujo.github.io/nuestra-boda/?i=mama
+
+PARA AGREGAR MÁS:
+En index.html busca: const invitados={
+y agrega, por ejemplo:
+,"leonardo":{nombre:"Leonardo Pacheco",cupos:2}
+,"andrea":{nombre:"Andrea",cupos:1}
+
+Los enlaces serían:
+https://narcisaaraujo.github.io/nuestra-boda/?i=leonardo
+https://narcisaaraujo.github.io/nuestra-boda/?i=andrea
+
+El botón de confirmación abre directamente WhatsApp al 0992825679.
