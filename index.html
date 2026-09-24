@@ -55,12 +55,12 @@ const target=new Date("2026-10-24T16:00:00-05:00").getTime();
 function tick(){const x=Math.max(0,target-Date.now());document.getElementById("d").textContent=Math.floor(x/86400000);document.getElementById("h").textContent=String(Math.floor(x%86400000/3600000)).padStart(2,"0");document.getElementById("m").textContent=String(Math.floor(x%3600000/60000)).padStart(2,"0");document.getElementById("s").textContent=String(Math.floor(x%60000/1000)).padStart(2,"0")}tick();setInterval(tick,1000);
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("show");io.unobserve(e.target)}}),{threshold:.18,rootMargin:"0px 0px -8% 0px"});document.querySelectorAll(".reveal").forEach(e=>io.observe(e));
 const invitados={
-  "rosa":{nombre:"RosaPerez",cupos:2},
+  "rosa":{nombre:"Rosa Perez",cupos:2},
   "leonardo":{nombre:"Leonardo y Katy",cupos:4},
   "humberto":{nombre:"Humberto y Anita",cupos:2},
   "santiago":{nombre:"Santiago y Ximena",cupos:4},
   "lili":{nombre:"Lili y Esteban",cupos:2},
-  "luca":{nombre:"Luca",cupos:1},
+  "luca":{nombre:"Luca Pallanca",cupos:1},
   "nelson":{nombre:"Nelson Timbi y Sra.",cupos:2},
   "marco":{nombre:"Marco y Cecy",cupos:4},
   "martha":{nombre:"Martha Timbi",cupos:2},
