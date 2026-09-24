@@ -49,5 +49,5 @@ nav a{color:var(--ink);text-decoration:none;font:500 10px Montserrat;letter-spac
 const target=new Date("2026-10-24T16:00:00-05:00").getTime();
 function tick(){const x=Math.max(0,target-Date.now());document.getElementById("d").textContent=Math.floor(x/86400000);document.getElementById("h").textContent=String(Math.floor(x%86400000/3600000)).padStart(2,"0");document.getElementById("m").textContent=String(Math.floor(x%3600000/60000)).padStart(2,"0");document.getElementById("s").textContent=String(Math.floor(x%60000/1000)).padStart(2,"0")}tick();setInterval(tick,1000);
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("show");io.unobserve(e.target)}}),{threshold:.18,rootMargin:"0px 0px -8% 0px"});document.querySelectorAll(".reveal").forEach(e=>io.observe(e));
-document.getElementById("confirmar").addEventListener("click",()=>window.open("https://wa.me/?text="+encodeURIComponent("Hola, confirmo mi asistencia a la boda de Narcisa & Diego el 24 de octubre de 2026."),"_blank"));
+document.getElementById("confirmar").addEventListener("click",()=>window.open("https://wa.me/593992825679?text="+encodeURIComponent("Hola, confirmo mi asistencia a la boda de Narcisa & Diego el 24 de octubre de 2026."),"_blank"));
 </script></body></html>
