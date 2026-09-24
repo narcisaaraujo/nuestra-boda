@@ -1,64 +1,53 @@
-<!doctype html><html lang="es"><head>
+<!doctype html>
+<html lang="es"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Narcy & Diego · 24.10.2026</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title>Narcisa & Diego · 24.10.2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-:root{--ivory:#fbf8f1;--white:#fffdf9;--sage:#66745c;--dark:#394536;--gold:#b78743;--line:#dec9a5;--ink:#403a34}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ivory);color:var(--ink);font-family:"Cormorant Garamond",serif}
-nav{position:fixed;z-index:30;top:0;left:0;right:0;height:66px;display:flex;align-items:center;justify-content:center;gap:36px;background:#fffdf9e8;backdrop-filter:blur(12px);border-bottom:1px solid #ddcfb755}
-nav a{font:500 10px Montserrat;letter-spacing:.19em;text-transform:uppercase;text-decoration:none;color:var(--ink)}
-.hero{min-height:100vh;display:grid;grid-template-columns:.9fr 1.1fr;padding-top:66px;background:var(--white)}
-.heroCopy{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:55px 7vw;position:relative}
-.heroCopy:before{content:"❦";position:absolute;top:13%;left:8%;font-size:120px;color:#b7874320;transform:rotate(-28deg)}
-.small{font:500 11px Montserrat;letter-spacing:.42em;text-transform:uppercase;color:var(--gold)}
-.names{font:400 clamp(80px,9vw,145px)/.73 "Great Vibes";margin:38px 0 30px;color:var(--gold)}.names span{display:block;color:var(--dark);margin-top:28px}.amp{font:400 42px "Cormorant Garamond"!important;color:#89745a!important;margin:13px!important}
-.motto{font-size:22px;font-style:italic}.date{font:500 13px Montserrat;letter-spacing:.34em;margin-top:28px}
-.heroPhoto{background:url("assets/hero.jpg") center/cover no-repeat;min-height:650px;position:relative}.heroPhoto:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#fffdf922,transparent 25%)}
-section.content{padding:110px 8vw}.title{text-align:center;margin-bottom:55px}.title h2{font:400 67px "Great Vibes";color:var(--dark);margin:10px}.orn{color:var(--gold);letter-spacing:.3em}
-.story{background:var(--ivory)}.split{max-width:1180px;margin:auto;display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}.photo{width:100%;height:570px;object-fit:cover;border-radius:230px 230px 12px 12px;box-shadow:0 24px 55px #493b2820}.text{text-align:center;font-size:22px;line-height:1.65}.quote{margin:30px auto 0;padding:24px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-style:italic}
-.ceremony{background:var(--white)}.reverse{grid-template-columns:.95fr 1.05fr}.details{text-align:center}.icon{font-size:36px;color:var(--gold)}.details h3{font:500 12px Montserrat;letter-spacing:.28em;text-transform:uppercase}.details .big{font-size:39px;color:var(--dark);margin:15px}.details p{font-size:20px;line-height:1.5}
-.btn{display:inline-block;margin-top:16px;background:var(--gold);color:white;text-decoration:none;border:0;padding:15px 26px;font:500 10px Montserrat;letter-spacing:.13em;text-transform:uppercase;cursor:pointer}
-.reception{min-height:720px;position:relative;display:flex;align-items:center;justify-content:center;background:url("assets/recepcion.jpg") center/cover no-repeat}.reception:before{content:"";position:absolute;inset:0;background:#2833247a}.glass{position:relative;max-width:650px;text-align:center;color:white;padding:60px 50px;background:#fff2;backdrop-filter:blur(7px);border:1px solid #ffffff80}.glass h2{font:400 70px "Great Vibes";margin:0 0 15px}.glass p{font-size:22px}.glass .btn{background:#fff;color:var(--dark)}
-.count{background:var(--dark);color:white;text-align:center}.count .title h2{color:white}.clock{display:flex;justify-content:center;gap:18px;flex-wrap:wrap}.unit{width:150px;padding:28px 10px;border:1px solid #ffffff50}.num{font-size:52px}.lab{font:400 9px Montserrat;letter-spacing:.17em;text-transform:uppercase;color:#e6dac7}
-.info{background:var(--ivory)}.infoGrid{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{text-align:center;background:var(--white);padding:45px 28px;border:1px solid #e2d4bd}.card h3{font:500 11px Montserrat;letter-spacing:.25em;text-transform:uppercase}.card p{font-size:19px;line-height:1.5}
-.rsvp{text-align:center;background:var(--white)}.rsvp p{font-size:22px;max-width:620px;margin:0 auto 20px}.footer{text-align:center;padding:70px 20px;background:var(--dark);color:white}.footer .nd{font:400 72px "Great Vibes";color:#d7b16d}.footer p{font:500 9px Montserrat;letter-spacing:.24em;text-transform:uppercase}
-.reveal{
-  opacity:0;
-  transform:translateY(55px) scale(.985);
-  filter:blur(5px);
-  transition:opacity 1.15s ease,transform 1.15s cubic-bezier(.2,.7,.2,1),filter 1.15s ease;
-}
-.reveal.show{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
-.photo.reveal{transform:translateY(45px) scale(.94)}
-.photo.reveal.show{transform:translateY(0) scale(1)}
-.card.reveal:nth-child(2){transition-delay:.12s}
-.card.reveal:nth-child(3){transition-delay:.24s}
-@media(prefers-reduced-motion:reduce){
-  .reveal,.photo.reveal{opacity:1!important;transform:none!important;filter:none!important;transition:none!important}
-}
-@media(max-width:800px){nav{display:none}.hero{grid-template-columns:1fr;padding-top:0}.heroCopy{min-height:650px}.heroPhoto{min-height:480px}.split,.reverse,.infoGrid{grid-template-columns:1fr;gap:35px}section.content{padding:78px 22px}.photo{height:430px;border-radius:170px 170px 10px 10px}.reverse .details{order:2}.title h2{font-size:56px}.reception{min-height:650px}.glass{margin:20px;padding:45px 25px}.unit{width:44%}.names{font-size:88px}}
+:root{--ivory:#fbf8f1;--paper:#fffdf8;--green:#344737;--sage:#6d7965;--gold:#b57d2a;--ink:#403b35;--line:#dfcfb3}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ivory);color:var(--ink);font-family:"Cormorant Garamond",serif;overflow-x:hidden}
+nav{position:fixed;z-index:20;inset:0 0 auto;height:62px;display:flex;justify-content:center;align-items:center;gap:34px;background:#fffdf8e8;backdrop-filter:blur(10px);border-bottom:1px solid #e8ddcb}
+nav a{color:var(--ink);text-decoration:none;font:500 10px Montserrat;letter-spacing:.17em;text-transform:uppercase}
+.hero{padding-top:62px;min-height:100vh;display:grid;grid-template-columns:1fr 1.12fr;background:var(--paper);align-items:stretch}
+.hero-copy{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:70px 7vw}
+.eyebrow{font:500 11px Montserrat;letter-spacing:.4em;text-transform:uppercase;color:var(--gold)}
+.names{font:400 clamp(80px,9vw,145px)/.72 "Great Vibes";color:var(--gold);margin:38px 0 30px}.names span{display:block;color:var(--green);margin-top:28px}.amp{font:400 40px "Cormorant Garamond"!important;color:#8d795f!important;margin:15px!important}
+.rule{color:var(--gold);letter-spacing:.3em}.motto{font-size:22px;font-style:italic}.date{margin-top:25px;font:500 13px Montserrat;letter-spacing:.32em}
+.hero-media{display:flex;align-items:center;background:#eee7da}.hero-media img{display:block;width:100%;height:auto;max-height:none}
+.section{padding:110px 8vw}.heading{text-align:center;margin-bottom:55px}.heading h2{font:400 68px "Great Vibes";color:var(--green);margin:8px}.split{max-width:1180px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.media-frame{overflow:hidden;border-radius:220px 220px 12px 12px;background:#eee7da}.media-frame img{display:block;width:100%;height:auto}
+.copy{text-align:center;font-size:22px;line-height:1.6}.quote{margin-top:30px;padding:24px 10px;border-block:1px solid var(--line);font-style:italic}
+.white{background:var(--paper)}.details{text-align:center}.details h3{font:500 11px Montserrat;letter-spacing:.25em;text-transform:uppercase}.big{font-size:42px;color:var(--green);margin:12px}.details p{font-size:20px;line-height:1.45}
+.btn{display:inline-block;border:0;background:var(--gold);color:white;padding:15px 25px;text-decoration:none;font:500 10px Montserrat;letter-spacing:.13em;text-transform:uppercase;cursor:pointer}
+.reception{padding:0;background:var(--green);color:white}.reception-grid{display:grid;grid-template-columns:1.25fr .75fr;align-items:center}.reception-photo{background:#e9e0d0}.reception-photo img{display:block;width:100%;height:auto}.reception-copy{text-align:center;padding:65px 7vw}.reception-copy h2{font:400 70px "Great Vibes";margin:5px}.reception-copy p{font-size:21px;line-height:1.5}.reception-copy .btn{background:#fff;color:var(--green)}
+.count{background:#26382b;color:white;text-align:center}.count .heading h2{color:white}.clock{display:flex;justify-content:center;gap:18px;flex-wrap:wrap}.unit{width:145px;border:1px solid #ffffff55;padding:25px 8px}.num{font-size:52px}.lab{font:400 9px Montserrat;letter-spacing:.16em;text-transform:uppercase;color:#e6d9c3}
+.info-grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{text-align:center;padding:45px 28px;background:var(--paper);border:1px solid #e4d7c2}.card h3{font:500 11px Montserrat;letter-spacing:.25em;text-transform:uppercase}.card p{font-size:19px}
+.rsvp{text-align:center;background:var(--paper)}.rsvp p{font-size:22px;max-width:620px;margin:0 auto 22px}.footer{text-align:center;padding:65px 20px;background:var(--green);color:white}.footer b{display:block;font:400 72px "Great Vibes";color:#dfbd7b}
+.reveal{opacity:0;transform:translateY(48px);filter:blur(4px);transition:opacity 1.05s ease,transform 1.05s cubic-bezier(.2,.7,.2,1),filter 1.05s}.reveal.show{opacity:1;transform:none;filter:none}
+@media(max-width:800px){nav{display:none}.hero{padding-top:0;grid-template-columns:1fr;min-height:0}.hero-copy{min-height:650px;padding:70px 22px}.hero-media{display:block}.section{padding:80px 22px}.split,.reception-grid,.info-grid{grid-template-columns:1fr;gap:38px}.media-frame{border-radius:150px 150px 10px 10px}.reception-copy{padding:70px 24px}.heading h2{font-size:57px}.names{font-size:90px}.unit{width:44%}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;filter:none;transition:none}}
 </style></head><body>
-<nav><a href="#inicio">Inicio</a><a href="#historia">Nuestra historia</a><a href="#ceremonia">Ceremonia</a><a href="#recepcion">Recepción</a><a href="#detalles">Detalles</a><a href="#rsvp">Confirmar</a></nav>
-<header class="hero" id="inicio"><div class="heroCopy"><div class="small">Nos casamos</div><h1 class="names">Narcy<span class="amp">&</span><span>Diego</span></h1><div class="orn">— ♥ —</div><p class="motto">Nuestro amor, nuestra fe, nuestra historia.</p><div class="date">24 · OCTUBRE · 2026</div></div><div class="heroPhoto"></div></header>
-<section class="content story" id="historia"><div class="title reveal"><div class="small">Una historia escrita con amor</div><h2>Nuestra Historia</h2><div class="orn">— ❦ —</div></div><div class="split"><img class="photo reveal" src="assets/historia.jpg" alt=""><div class="text reveal"><p>Dos caminos que se encontraron, una historia que creció con el tiempo y hoy se convierte en un “para siempre” con la bendición de Dios.</p><div class="quote">“Lo que Dios ha unido, que no lo separe el hombre.”<br><strong>Mateo 19, 6</strong></div></div></div></section>
-<section class="content ceremony" id="ceremonia"><div class="split reverse"><div class="details reveal"><div class="icon">♰</div><h3>Ceremonia religiosa</h3><div class="big">16h00</div><p><strong>Sábado, 24 de octubre de 2026</strong></p><p>Iglesia San Pedro del Cebollar<br>Cuenca, Ecuador</p><p><em>Acompáñanos a recibir la bendición de Dios en este día tan especial.</em></p><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Iglesia+San+Pedro+del+Cebollar+Cuenca+Ecuador">Cómo llegar</a></div><img class="photo reveal" src="assets/iglesia.jpg" alt=""></div></section>
-<section class="reception" id="recepcion"><div class="glass reveal"><div class="small" style="color:#f1d7aa">Celebremos juntos</div><h2>Recepción</h2><p>Después de la ceremonia, queremos compartir contigo una noche llena de alegría y recuerdos inolvidables.</p><p><strong>Estancia San José</strong><br>18h00 · Cuenca, Ecuador</p><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Estancia+San+Jose+Cuenca+Ecuador">Cómo llegar</a></div></section>
-<section class="content count"><div class="title reveal"><div class="small" style="color:#e5c58e">Cada vez falta menos</div><h2>Cuenta regresiva</h2></div><div class="clock reveal"><div class="unit"><div class="num" id="d">00</div><div class="lab">Días</div></div><div class="unit"><div class="num" id="h">00</div><div class="lab">Horas</div></div><div class="unit"><div class="num" id="m">00</div><div class="lab">Minutos</div></div><div class="unit"><div class="num" id="s">00</div><div class="lab">Segundos</div></div></div></section>
-<section class="content info" id="detalles"><div class="title reveal"><div class="small">Detalles para nuestro día</div><h2>Información</h2><div class="orn">— ❦ —</div></div><div class="infoGrid"><div class="card reveal"><div class="icon">♔</div><h3>Dress code</h3><p><strong>Estrictamente formal</strong></p><p>Reservamos el blanco, marfil y tonos similares para la novia.</p></div><div class="card reveal"><div class="icon">♡</div><h3>Padrinos</h3><p><strong>Leonardo Pacheco</strong><br>&<br><strong>Catalina Faicán</strong></p></div><div class="card reveal"><div class="icon">❦</div><h3>Con amor y fe</h3><p><em>“Que todas nuestras sendas sean una sola senda ante Ti.”</em></p><p>Eclesiastés 4:12</p></div></div></section>
-<section class="content rsvp" id="rsvp"><div class="title reveal"><div class="small">Queremos celebrar contigo</div><h2>Confirma tu asistencia</h2><div class="orn">— ♥ —</div></div><p class="reveal">Tu presencia hará aún más especial este momento. Confírmanos que podrás acompañarnos.</p><button class="btn reveal" onclick="rsvp()">Confirmar asistencia</button></section>
-<footer class="footer"><div class="nd">N & D</div><p>Gracias por ser parte de nuestra historia · 24.10.2026</p></footer>
+<nav><a href="#inicio">Inicio</a><a href="#historia">Nuestra historia</a><a href="#ceremonia">Ceremonia</a><a href="#recepcion">Recepción</a><a href="#detalles">Información</a><a href="#rsvp">Confirmar</a></nav>
+
+<header class="hero" id="inicio"><div class="hero-copy"><div class="eyebrow">Nos casamos</div><h1 class="names">Narcisa<span class="amp">&</span><span>Diego</span></h1><div class="rule">— ♥ —</div><p class="motto">Nuestro amor, nuestra fe, nuestra historia.</p><div class="date">24 · OCTUBRE · 2026</div></div><div class="hero-media"><img src="assets/portada.jpg" alt="Novios al atardecer"></div></header>
+
+<section class="section" id="historia"><div class="heading reveal"><div class="eyebrow">Una historia escrita con amor</div><h2>Nuestra Historia</h2><div class="rule">— ❦ —</div></div><div class="split"><div class="media-frame reveal"><img src="assets/historia.jpg" alt="Novios tomados de la mano"></div><div class="copy reveal"><p>Dos caminos que se encontraron, una historia que creció con el tiempo y hoy se convierte en un “para siempre” con la bendición de Dios.</p><div class="quote">“Lo que Dios ha unido, que no lo separe el hombre.”<br><strong>Mateo 19, 6</strong></div></div></div></section>
+
+<section class="section white" id="ceremonia"><div class="split"><div class="details reveal"><div class="eyebrow">Ceremonia religiosa</div><div class="big">16h00</div><p><strong>Sábado, 24 de octubre de 2026</strong></p><p>Iglesia San Pedro del Cebollar<br>Cuenca, Ecuador</p><p><em>Acompáñanos a recibir la bendición de Dios en este día tan especial.</em></p><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Iglesia+San+Pedro+del+Cebollar+Cuenca+Ecuador">Cómo llegar</a></div><div class="media-frame reveal"><img src="assets/iglesia.jpg" alt="Interior de iglesia"></div></div></section>
+
+<section class="reception" id="recepcion"><div class="reception-grid"><div class="reception-photo reveal"><img src="assets/recepcion.jpg" alt="Mesa elegante de recepción"></div><div class="reception-copy reveal"><div class="eyebrow" style="color:#e9ca91">Celebremos juntos</div><h2>Recepción</h2><p>Después de la ceremonia, queremos compartir contigo una noche llena de alegría y recuerdos inolvidables.</p><p><strong>Estancia San José</strong><br>18h00 · Cuenca, Ecuador</p><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Estancia+San+Jose+Cuenca+Ecuador">Cómo llegar</a></div></div></section>
+
+<section class="section count"><div class="heading reveal"><div class="eyebrow" style="color:#e9ca91">Cada vez falta menos</div><h2>Cuenta regresiva</h2></div><div class="clock reveal"><div class="unit"><div class="num" id="d">00</div><div class="lab">Días</div></div><div class="unit"><div class="num" id="h">00</div><div class="lab">Horas</div></div><div class="unit"><div class="num" id="m">00</div><div class="lab">Minutos</div></div><div class="unit"><div class="num" id="s">00</div><div class="lab">Segundos</div></div></div></section>
+
+<section class="section" id="detalles"><div class="heading reveal"><div class="eyebrow">Detalles para nuestro día</div><h2>Información</h2><div class="rule">— ❦ —</div></div><div class="info-grid"><div class="card reveal"><h3>Dress code</h3><p><strong>Estrictamente formal</strong></p></div><div class="card reveal"><h3>Padrinos</h3><p><strong>Leonardo Pacheco</strong><br>&<br><strong>Catalina Faicán</strong></p></div><div class="card reveal"><h3>Con amor y fe</h3><p><em>“Lo que Dios ha unido, que no lo separe el hombre.”</em><br>Mateo 19, 6</p></div></div></section>
+
+<section class="section rsvp" id="rsvp"><div class="heading reveal"><div class="eyebrow">Queremos celebrar contigo</div><h2>Confirma tu asistencia</h2><div class="rule">— ♥ —</div></div><p class="reveal">Tu presencia hará aún más especial este momento.</p><button class="btn reveal" id="confirmar">Confirmar asistencia</button></section>
+<footer class="footer"><b>N & D</b><p>24 · 10 · 2026</p></footer>
 <script>
-const target=new Date("2026-10-24T16:00:00-05:00").getTime();function tick(){let x=Math.max(0,target-Date.now());d.textContent=Math.floor(x/86400000);h.textContent=String(Math.floor(x%86400000/3600000)).padStart(2,"0");m.textContent=String(Math.floor(x%3600000/60000)).padStart(2,"0");s.textContent=String(Math.floor(x%60000/1000)).padStart(2,"0")}tick();setInterval(tick,1000);
-const revealEls=document.querySelectorAll(".reveal");
-const io=new IntersectionObserver((entries)=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add("show");
-      io.unobserve(entry.target);
-    }
-  });
-},{threshold:.20,rootMargin:"0px 0px -10% 0px"});
-revealEls.forEach(el=>io.observe(el));
-function rsvp(){window.open("https://wa.me/?text="+encodeURIComponent("Hola, confirmo mi asistencia a la boda de Narcy & Diego el 24 de octubre de 2026."),"_blank")}
+const target=new Date("2026-10-24T16:00:00-05:00").getTime();
+function tick(){const x=Math.max(0,target-Date.now());document.getElementById("d").textContent=Math.floor(x/86400000);document.getElementById("h").textContent=String(Math.floor(x%86400000/3600000)).padStart(2,"0");document.getElementById("m").textContent=String(Math.floor(x%3600000/60000)).padStart(2,"0");document.getElementById("s").textContent=String(Math.floor(x%60000/1000)).padStart(2,"0")}tick();setInterval(tick,1000);
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("show");io.unobserve(e.target)}}),{threshold:.18,rootMargin:"0px 0px -8% 0px"});document.querySelectorAll(".reveal").forEach(e=>io.observe(e));
+document.getElementById("confirmar").addEventListener("click",()=>window.open("https://wa.me/?text="+encodeURIComponent("Hola, confirmo mi asistencia a la boda de Narcisa & Diego el 24 de octubre de 2026."),"_blank"));
 </script></body></html>
