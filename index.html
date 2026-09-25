@@ -104,7 +104,115 @@ footer.footer{padding-top:48px!important;padding-bottom:48px!important}
  .bank-brand{gap:10px}.bp-mark{width:52px;height:52px}.bp-name strong{font-size:16px}
 }
 </style>
+
+<style>
+/* COMPACTACIÓN FINAL: menos vacíos, mejor lectura */
+.section{padding:58px 22px!important}
+.heading{margin-bottom:30px!important}
+.heading h2{font-size:clamp(43px,5vw,58px)!important;line-height:1.02!important}
+.heading .eyebrow,.eyebrow{font-size:11px!important;letter-spacing:.22em!important}
+p{font-size:17px;line-height:1.65}
+.split{gap:30px!important;align-items:center}
+.copy p,.details p{font-size:17px!important}
+.hero-copy{padding-top:58px!important;padding-bottom:50px!important}
+.reception-luxe .reception-copy{padding:54px 40px!important}
+.reception-luxe .reception-photo{min-height:520px!important}
+.reception-text{font-size:18px!important;line-height:1.65!important;margin-bottom:20px!important}
+.reception-note{font-size:16px!important;margin-bottom:18px!important}
+.venue-card{padding:22px!important;margin-bottom:18px!important}
+.count{padding:54px 22px!important}
+.info-grid{gap:18px!important}
+.detail-card{padding:28px 22px!important;min-height:0!important}
+.detail-card h3{font-size:20px!important}
+.detail-main{font-size:22px!important}
+.detail-sub{font-size:16px!important;line-height:1.5!important}
+.detail-verse{font-size:19px!important}
+.details-intro{font-size:18px!important;line-height:1.6!important;margin-top:14px!important}
+.sacred-details{padding:56px 18px!important}
+.sacred-details p{font-size:18px!important;line-height:1.65!important;margin-bottom:18px!important}
+.sacred-details img{margin-top:18px!important;max-height:480px;object-fit:cover}
+.gift-section{padding:56px 18px!important}
+.gift-lead{font-size:25px!important}
+.gift-copy{font-size:17px!important;line-height:1.6!important;margin-bottom:20px!important}
+.bank-card{padding:27px 26px!important;margin-bottom:16px!important}
+.bank-label{font-size:11px!important}
+.bank-value{font-size:26px!important}.account-row{font-size:31px!important}
+.gift-thanks{font-size:16px!important;margin-top:18px!important}
+.gift-ornament{width:74px!important;height:74px!important;margin-bottom:6px!important}
+.bank-logo-only{display:flex;justify-content:center;align-items:center;margin:0 auto 12px}
+.pacifico-symbol{width:68px;height:68px;border-radius:14px;background:#0876bb;color:white;display:flex;align-items:center;justify-content:center;font:700 55px/1 Arial,sans-serif;transform:rotate(-10deg);box-shadow:0 8px 18px rgba(8,118,187,.16)}
+.rsvp{padding-top:56px!important;padding-bottom:60px!important}
+.rsvp-message{font-size:19px!important;line-height:1.6!important;margin:18px auto 20px!important}
+.guest-box{padding-top:28px!important;padding-bottom:28px!important;margin-top:20px!important;margin-bottom:18px!important}
+.guest-kicker,.guest-intro,.guest-note,.guest-seats{font-size:16px!important;line-height:1.55!important}
+.guest-name{font-size:clamp(36px,5vw,50px)!important}
+footer.footer{padding:34px 20px!important}
+@media(max-width:850px){
+ .section{padding:46px 16px!important}
+ .hero-copy{padding:46px 18px 38px!important}
+ .split,.reception-grid{gap:0!important}
+ .reception-luxe .reception-photo{min-height:300px!important;max-height:420px}
+ .reception-luxe .reception-copy{padding:44px 20px!important}
+ .reception-luxe h2{font-size:48px!important}
+ .sacred-details,.gift-section{padding:46px 15px!important}
+ .info-grid{gap:14px!important}
+ .detail-card{padding:24px 18px!important}
+}
+@media(max-width:600px){
+ p{font-size:16px}
+ .heading{margin-bottom:24px!important}
+ .heading h2{font-size:44px!important}
+ .details-intro,.reception-text,.sacred-details p,.gift-copy{font-size:16px!important}
+ .reception-luxe .reception-photo{min-height:260px!important;height:300px!important}
+ .guest-kicker,.guest-intro,.guest-note,.guest-seats{font-size:15px!important}
+}
+</style>
+
+<style>
+/* Detalles animados elegantes */
+.deadline{width:min(100%,430px);margin:20px auto 8px;padding:18px 20px 16px;border-top:1px solid #caa35e;border-bottom:1px solid #caa35e;text-align:center;background:rgba(255,250,240,.55)}
+.deadline-small{font:600 10px Montserrat,Arial,sans-serif;letter-spacing:.27em;color:#88704b}
+.deadline-date{margin-top:7px;font:500 25px "Cormorant Garamond",Georgia,serif;letter-spacing:.08em;color:#52604b}
+.deadline-heart{font-size:12px;color:#c89b4f;margin-top:7px;animation:heartPulse 2.4s ease-in-out infinite}
+@keyframes heartPulse{0%,100%{transform:scale(1);opacity:.75}50%{transform:scale(1.28);opacity:1}}
+/* Soft gold shimmer on primary buttons */
+.btn,.copy-account{position:relative;overflow:hidden}
+.btn:after,.copy-account:after{content:"";position:absolute;top:-80%;left:-60%;width:35%;height:260%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.38),transparent);transform:rotate(18deg);animation:buttonShine 5.8s ease-in-out infinite;pointer-events:none}
+@keyframes buttonShine{0%,65%{left:-60%}82%,100%{left:135%}}
+/* Gentle floating ornaments */
+.detail-symbol,.reception-ornament,.gift-icon{animation:softFloat 4s ease-in-out infinite}
+@keyframes softFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+/* Slow photo breathing, barely perceptible */
+.hero-media img,.reception-photo img{animation:photoBreath 14s ease-in-out infinite alternate;transform-origin:center}
+@keyframes photoBreath{from{transform:scale(1)}to{transform:scale(1.035)}}
+/* Delicate falling ivory petals; intentionally sparse */
+.petal-layer{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:50}
+.petal-layer i{position:absolute;top:-30px;width:9px;height:14px;border-radius:70% 20% 70% 20%;background:rgba(246,236,215,.72);box-shadow:0 0 5px rgba(188,154,94,.12);animation:petalFall linear infinite;opacity:0}
+.petal-layer i:nth-child(1){left:8%;animation-duration:14s;animation-delay:1s}
+.petal-layer i:nth-child(2){left:23%;animation-duration:17s;animation-delay:7s;width:7px;height:11px}
+.petal-layer i:nth-child(3){left:39%;animation-duration:15s;animation-delay:3s}
+.petal-layer i:nth-child(4){left:57%;animation-duration:19s;animation-delay:10s;width:6px;height:10px}
+.petal-layer i:nth-child(5){left:71%;animation-duration:16s;animation-delay:5s}
+.petal-layer i:nth-child(6){left:86%;animation-duration:18s;animation-delay:12s;width:8px;height:12px}
+.petal-layer i:nth-child(7){left:95%;animation-duration:20s;animation-delay:2s;width:6px;height:9px}
+@keyframes petalFall{
+ 0%{transform:translate3d(0,-20px,0) rotate(0deg);opacity:0}
+ 8%{opacity:.65}
+ 50%{transform:translate3d(28px,50vh,0) rotate(180deg)}
+ 92%{opacity:.5}
+ 100%{transform:translate3d(-22px,105vh,0) rotate(360deg);opacity:0}
+}
+/* Enhance existing scroll reveal */
+.reveal{transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1),filter .9s ease!important}
+@media(prefers-reduced-motion:reduce){
+ .petal-layer{display:none}.deadline-heart,.detail-symbol,.reception-ornament,.gift-icon,.hero-media img,.reception-photo img,.btn:after,.copy-account:after{animation:none!important}
+}
+@media(max-width:600px){.deadline-date{font-size:22px}.petal-layer i:nth-child(even){display:none}}
+</style>
 </head><body>
+<div class="petal-layer" aria-hidden="true">
+ <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+</div>
 <nav><a href="#inicio">Inicio</a><a href="#historia">Nuestra historia</a><a href="#ceremonia">Ceremonia</a><a href="#recepcion">Recepción</a><a href="#detalles">Información</a><a href="#rsvp">Confirmar</a></nav>
 
 <header class="hero" id="inicio"><div class="hero-copy"><div class="eyebrow">Nos casamos</div><h1 class="names">Narcisa<span class="amp">&</span><span>Diego</span></h1><div class="rule">— ♥ —</div><p class="motto">Nuestro amor, nuestra fe, nuestra historia.</p><div class="date">24 · OCTUBRE · 2026</div></div><div class="hero-media"><img src="assets/portada.jpg" alt="Novios al atardecer"></div></header>
@@ -175,9 +283,8 @@ footer.footer{padding-top:48px!important;padding-bottom:48px!important}
     <p class="gift-lead">Tu presencia es nuestro mejor regalo.</p>
     <p class="gift-copy">Si además deseas tener un detalle con nosotros, puedes hacerlo a través de la siguiente cuenta:</p>
     <div class="bank-card">
-      <div class="bank-brand">
-        <div class="bp-mark" aria-hidden="true">BP</div>
-        <div class="bp-name"><span>Banco</span><strong>del Pacífico</strong></div>
+      <div class="bank-logo-only" aria-label="Banco del Pacífico">
+        <div class="pacifico-symbol" aria-hidden="true">∞</div>
       </div>
       <div class="bank-line"></div>
       <div class="bank-label">Titular</div>
@@ -225,6 +332,11 @@ document.addEventListener("DOMContentLoaded",function(){
 <div class="seat-medallion"><div class="seat-number" id="seatNumber"></div><div class="seat-label" id="seatLabel"></div></div>
 <div class="guest-seats" id="guestSeats"></div>
 <div class="guest-note">Los lugares indicados han sido reservados especialmente para esta invitación. Te agradecemos confirmar tu asistencia para ayudarnos a preparar cada detalle con mucho cariño.</div></div>
+<div class="deadline reveal">
+  <div class="deadline-small">CONFIRMACIÓN HASTA</div>
+  <div class="deadline-date">10 · OCTUBRE · 2026</div>
+  <div class="deadline-heart">♥</div>
+</div>
 <p class="rsvp-message reveal">Nos hará muy felices contar contigo. Por favor, confirma tu asistencia mediante el siguiente botón.</p><button class="btn reveal" id="confirmar">Confirmar asistencia</button></section>
 <footer class="footer"><b>N & D</b><p>24 · 10 · 2026</p></footer>
 <script>
@@ -270,9 +382,7 @@ document.getElementById("confirmar").addEventListener("click",()=>{
 <audio id="weddingMusic" preload="auto" loop>
   <source src="assets/when-a-man-loves-a-woman.mp3" type="audio/mpeg">
 </audio>
-<button id="musicButton" class="music-button" type="button" aria-label="Reproducir música">
-  <span class="music-icon">♫</span><span id="musicText">Música</span>
-</button>
+<button id="musicButton" class="music-button" type="button" aria-label="Reproducir música">♫ NUESTRA CANCIÓN</button>
 <style>
 .music-button{position:fixed;right:20px;bottom:20px;z-index:9999;display:flex;align-items:center;gap:9px;padding:12px 18px;border-radius:999px;border:1px solid rgba(190,153,88,.8);background:rgba(255,250,240,.94);color:#53624c;box-shadow:0 8px 28px rgba(45,39,28,.18);font:600 11px Montserrat,Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;backdrop-filter:blur(8px)}
 .music-button:hover{transform:translateY(-2px)}.music-icon{font:400 21px Georgia,serif;color:#b58a43}.music-button.playing .music-icon{animation:musicPulse 1.8s ease-in-out infinite}
