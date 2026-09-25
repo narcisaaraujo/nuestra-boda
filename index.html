@@ -209,6 +209,41 @@ footer.footer{padding:34px 20px!important}
 }
 @media(max-width:600px){.deadline-date{font-size:22px}.petal-layer i:nth-child(even){display:none}}
 </style>
+
+<style>
+/* Corrección definitiva del hueco en RECEPCIÓN */
+.reception-luxe .reception-grid{
+  display:grid!important;
+  grid-template-columns:1fr 1fr!important;
+  align-items:stretch!important;
+}
+.reception-luxe .reception-photo{
+  position:relative!important;
+  min-height:0!important;
+  height:auto!important;
+  align-self:stretch!important;
+  overflow:hidden!important;
+}
+.reception-luxe .reception-photo img{
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  min-height:100%!important;
+  object-fit:cover!important;
+  object-position:center!important;
+  display:block!important;
+}
+.reception-luxe .photo-glow{position:absolute!important;inset:0!important}
+@media(max-width:850px){
+ .reception-luxe .reception-grid{grid-template-columns:1fr!important}
+ .reception-luxe .reception-photo{height:360px!important;min-height:360px!important}
+ .reception-luxe .reception-photo img{position:absolute!important;height:100%!important}
+}
+@media(max-width:600px){
+ .reception-luxe .reception-photo{height:300px!important;min-height:300px!important}
+}
+</style>
 </head><body>
 <div class="petal-layer" aria-hidden="true">
  <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
@@ -380,7 +415,7 @@ document.getElementById("confirmar").addEventListener("click",()=>{
 });
 </script>
 <audio id="weddingMusic" preload="auto" loop>
-  <source src="assets/when-a-man-loves-a-woman.mp3" type="audio/mpeg">
+  <source src="assets/nuestra-cancion.mp3" type="audio/mpeg">
 </audio>
 <button id="musicButton" class="music-button" type="button" aria-label="Reproducir música">♫ NUESTRA CANCIÓN</button>
 <style>
