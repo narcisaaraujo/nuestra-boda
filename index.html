@@ -38,7 +38,73 @@ nav a{color:var(--ink);text-decoration:none;font:500 10px Montserrat;letter-spac
 .reveal{opacity:0;transform:translateY(48px);filter:blur(4px);transition:opacity 1.05s ease,transform 1.05s cubic-bezier(.2,.7,.2,1),filter 1.05s}.reveal.show{opacity:1;transform:none;filter:none}
 @media(max-width:800px){nav{display:none}.hero{padding-top:0;grid-template-columns:1fr;min-height:0}.hero-copy{min-height:650px;padding:70px 22px}.hero-media{display:block}.section{padding:80px 22px}.split,.reception-grid,.info-grid{grid-template-columns:1fr;gap:38px}.media-frame{border-radius:150px 150px 10px 10px}.reception-copy{padding:70px 24px}.heading h2{font-size:57px}.names{font-size:90px}.unit{width:44%}}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;filter:none;transition:none}}
-</style></head><body>
+</style><style>
+.details-intro{max-width:720px;margin:20px auto 0;line-height:1.75;font-size:17px;color:#71675a;font-style:italic}
+.detail-card{position:relative;padding:38px 25px!important;border-top:1px solid #d6b879!important;border-bottom:1px solid #d6b879!important;background:linear-gradient(180deg,rgba(255,253,248,.92),rgba(247,239,225,.72))!important}
+.detail-symbol{font:400 27px Georgia,serif;color:#b58a43;margin-bottom:14px}.detail-card h3{margin-bottom:15px!important}
+.detail-main{font:600 20px "Cormorant Garamond",Georgia,serif!important;color:#52604b;line-height:1.35}.detail-amp{color:#b58a43;font-style:italic}
+.detail-sub{max-width:280px;margin:12px auto 0!important;font-size:14px!important;line-height:1.55;color:#817566}
+.detail-verse{font:italic 18px/1.6 "Cormorant Garamond",Georgia,serif!important;color:#52604b}.detail-cite{margin-top:9px!important;font-size:13px!important;letter-spacing:.12em;color:#a27f45}
+.rsvp-message{max-width:590px;margin:25px auto 26px!important;font-size:18px!important;line-height:1.7;color:#6e6458;font-style:italic}
+.guest-note{line-height:1.65!important}
+</style>
+<style>
+.reception-luxe{position:relative;overflow:hidden;background:linear-gradient(135deg,#263328 0%,#3c4a3b 55%,#2b382d 100%)}
+.reception-luxe:before{content:"❦";position:absolute;right:-28px;top:-60px;font-size:240px;color:rgba(224,195,139,.055);z-index:0}
+.reception-luxe .reception-grid{position:relative;z-index:1}
+.reception-luxe .reception-photo{position:relative;overflow:hidden;min-height:650px}
+.reception-luxe .reception-photo img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.85) contrast(1.03)}
+.photo-glow{position:absolute;inset:0;background:linear-gradient(90deg,transparent 65%,rgba(38,51,40,.28))}
+.reception-luxe .reception-copy{text-align:center;padding:75px 55px;color:#f8f0df;display:flex;flex-direction:column;justify-content:center;align-items:center}
+.reception-ornament{font-size:27px;color:#d8b36e;margin-bottom:12px}.reception-eyebrow{color:#e8cd99!important;letter-spacing:.25em}
+.reception-luxe h2{font:400 62px "Great Vibes",cursive;color:#fff9ec;margin:10px 0 4px;line-height:1.05}
+.reception-rule{display:flex;align-items:center;gap:12px;width:205px;color:#d6ad64;margin:13px auto 23px}.reception-rule span{height:1px;background:#cba55f;flex:1}
+.reception-lead{font:italic 25px "Cormorant Garamond",Georgia,serif!important;color:#ead09d;margin:0 0 14px!important}
+.reception-text{max-width:520px;font-size:17px!important;line-height:1.8!important;color:#f4eee3;margin:0 auto 27px!important}
+.venue-card{width:min(100%,430px);padding:28px 25px;margin:0 auto 24px;border:1px solid rgba(222,190,128,.65);background:rgba(255,250,239,.07);box-shadow:inset 0 0 0 5px rgba(255,255,255,.025)}
+.venue-label{font:600 9px Montserrat,Arial,sans-serif;letter-spacing:.28em;color:#d9ba7e;margin-bottom:9px}.venue-name{font:400 34px "Cormorant Garamond",Georgia,serif;color:#fffaf0}
+.venue-details{display:flex;justify-content:center;align-items:center;gap:10px;margin-top:13px;font:500 11px Montserrat,Arial,sans-serif;letter-spacing:.1em;color:#e9d5af}.venue-details b{color:#cda55e}
+.venue-place{margin-top:10px;font-size:15px;color:#f0e7d8}.reception-note{max-width:470px;font-style:italic!important;line-height:1.6!important;color:#dfd2be!important;margin:0 auto 25px!important}
+.reception-btn{border-color:#d1aa62!important;background:#d1aa62!important;color:#263328!important}.reception-btn:hover{background:#e0bf7e!important}
+@media(max-width:850px){.reception-luxe .reception-photo{min-height:430px}.reception-luxe .reception-copy{padding:62px 24px}.reception-luxe h2{font-size:52px}.photo-glow{background:linear-gradient(180deg,transparent 70%,rgba(38,51,40,.24))}}
+</style>
+
+<style>
+/* Final art direction — ivory, sage, deep green and champagne gold */
+body{background:linear-gradient(180deg,#fffdf9 0%,#f8f1e6 100%)}
+.section{position:relative}
+.section:not(.count):before{content:"";position:absolute;left:50%;top:28px;transform:translateX(-50%);width:44px;height:1px;background:linear-gradient(90deg,transparent,#c89e55,transparent)}
+.heading .eyebrow{letter-spacing:.32em}
+.heading h2{letter-spacing:.01em}
+.card,.guest-box,.bank-card,.venue-card{border-radius:2px}
+.info-grid{gap:24px!important}
+.detail-card{box-shadow:0 16px 40px rgba(72,56,34,.06);transition:transform .35s ease,box-shadow .35s ease}
+.detail-card:hover{transform:translateY(-5px);box-shadow:0 20px 45px rgba(72,56,34,.10)}
+.sacred-details img{max-width:760px;margin:28px auto 0;border-radius:220px 220px 8px 8px;box-shadow:0 18px 42px rgba(55,45,30,.12)}
+.sacred-details p{max-width:700px}
+.gift-section{position:relative;overflow:hidden}
+.gift-section:before,.gift-section:after{content:"❦";position:absolute;color:rgba(181,125,42,.07);font-size:150px}
+.gift-section:before{left:-28px;top:40px;transform:rotate(-28deg)}.gift-section:after{right:-28px;bottom:20px;transform:rotate(150deg)}
+.bank-card{max-width:520px!important;padding:35px 34px!important}
+.bank-brand{display:flex;justify-content:center;align-items:center;gap:13px;margin-bottom:4px}
+.bp-mark{width:58px;height:58px;border-radius:13px;background:#0876bb;color:white;display:grid;place-items:center;font:600 20px Montserrat,Arial,sans-serif;letter-spacing:-.06em;box-shadow:0 8px 20px rgba(8,118,187,.16)}
+.bp-name{text-align:left;line-height:1.02;color:#0876bb;font-family:Montserrat,Arial,sans-serif}
+.bp-name span,.bp-name strong{display:block}.bp-name span{font-size:14px;font-weight:500}.bp-name strong{font-size:18px;font-weight:600}
+.account-row{font-size:31px!important}
+.copy-account{border-radius:999px!important;padding:14px 24px!important;box-shadow:0 8px 22px rgba(55,70,54,.13)}
+.rsvp{background:linear-gradient(180deg,#fffdf8,#f5ecdc)}
+.rsvp .btn{border-radius:999px;padding:16px 29px;box-shadow:0 10px 25px rgba(181,125,42,.20)}
+.guest-box{border-radius:4px!important}
+.music-button{border-radius:999px!important}
+footer.footer{padding-top:48px!important;padding-bottom:48px!important}
+@media(max-width:650px){
+ nav{gap:13px;padding:0 8px;overflow-x:auto;justify-content:flex-start}
+ nav a{font-size:8px;white-space:nowrap}
+ .sacred-details img{border-radius:120px 120px 6px 6px}
+ .bank-brand{gap:10px}.bp-mark{width:52px;height:52px}.bp-name strong{font-size:16px}
+}
+</style>
+</head><body>
 <nav><a href="#inicio">Inicio</a><a href="#historia">Nuestra historia</a><a href="#ceremonia">Ceremonia</a><a href="#recepcion">Recepción</a><a href="#detalles">Información</a><a href="#rsvp">Confirmar</a></nav>
 
 <header class="hero" id="inicio"><div class="hero-copy"><div class="eyebrow">Nos casamos</div><h1 class="names">Narcisa<span class="amp">&</span><span>Diego</span></h1><div class="rule">— ♥ —</div><p class="motto">Nuestro amor, nuestra fe, nuestra historia.</p><div class="date">24 · OCTUBRE · 2026</div></div><div class="hero-media"><img src="assets/portada.jpg" alt="Novios al atardecer"></div></header>
@@ -47,11 +113,36 @@ nav a{color:var(--ink);text-decoration:none;font:500 10px Montserrat;letter-spac
 
 <section class="section white" id="ceremonia"><div class="split"><div class="details reveal"><div class="eyebrow">Ceremonia religiosa</div><div class="big">16h00</div><p><strong>Sábado, 24 de octubre de 2026</strong></p><p>Iglesia San Pedro del Cebollar<br>Cuenca, Ecuador</p><p><em>Acompáñanos a recibir la bendición de Dios en este día tan especial.</em></p><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Iglesia+San+Pedro+del+Cebollar+Cuenca+Ecuador">Cómo llegar</a></div><div class="media-frame reveal"><img src="assets/iglesia.jpg" alt="Interior de iglesia"></div></div></section>
 
-<section class="reception" id="recepcion"><div class="reception-grid"><div class="reception-photo reveal"><img src="assets/recepcion.jpg" alt="Mesa elegante de recepción"></div><div class="reception-copy reveal"><div class="eyebrow" style="color:#e9ca91">Celebremos juntos</div><h2>Recepción</h2><p>Después de la ceremonia, queremos compartir contigo una noche llena de alegría y recuerdos inolvidables.</p><p><strong>Estancia San José</strong><br>18h00 · Cuenca, Ecuador</p><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Estancia+San+Jose+Cuenca+Ecuador">Cómo llegar</a></div></div></section>
+<section class="reception reception-luxe" id="recepcion">
+<div class="reception-grid">
+<div class="reception-photo reveal"><img src="assets/recepcion.jpg" alt="Recepción de boda en Estancia San José"><div class="photo-glow"></div></div>
+<div class="reception-copy reveal">
+<div class="reception-ornament">✦</div>
+<div class="eyebrow reception-eyebrow">Después del “Sí, acepto”</div>
+<h2>Celebrémoslo juntos</h2>
+<div class="reception-rule"><span></span>♥<span></span></div>
+<p class="reception-lead">La celebración continúa...</p>
+<p class="reception-text">Después de recibir la bendición de Dios, queremos brindar, sonreír y compartir contigo una noche que guardaremos para siempre en nuestros corazones.</p>
+<div class="venue-card">
+<div class="venue-label">RECEPCIÓN</div>
+<div class="venue-name">Estancia San José</div>
+<div class="venue-details"><span>24 · OCTUBRE · 2026</span><b>•</b><span>18h00</span></div>
+<div class="venue-place">Cuenca, Ecuador</div>
+</div>
+<p class="reception-note">Te esperamos para celebrar el comienzo de esta nueva etapa de nuestras vidas.</p>
+<a class="btn reception-btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Estancia+San+Jose+Cuenca+Ecuador">Ver ubicación</a>
+</div></div></section>
 
 <section class="section count"><div class="heading reveal"><div class="eyebrow" style="color:#e9ca91">Cada vez falta menos</div><h2>Cuenta regresiva</h2></div><div class="clock reveal"><div class="unit"><div class="num" id="d">00</div><div class="lab">Días</div></div><div class="unit"><div class="num" id="h">00</div><div class="lab">Horas</div></div><div class="unit"><div class="num" id="m">00</div><div class="lab">Minutos</div></div><div class="unit"><div class="num" id="s">00</div><div class="lab">Segundos</div></div></div></section>
 
-<section class="section" id="detalles"><div class="heading reveal"><div class="eyebrow">Detalles para nuestro día</div><h2>Información</h2><div class="rule">— ❦ —</div></div><div class="info-grid"><div class="card reveal"><h3>Dress code</h3><p><strong>Estrictamente formal</strong></p></div><div class="card reveal"><h3>Padrinos</h3><p><strong>Leonardo Pacheco</strong><br>&<br><strong>Catalina Faicán</strong></p></div><div class="card reveal"><h3>Con amor y fe</h3><p><em>“Lo que Dios ha unido, que no lo separe el hombre.”</em><br>Mateo 19, 6</p></div></div></section>
+<section class="section" id="detalles">
+<div class="heading reveal"><div class="eyebrow">Todo está preparado con amor</div><h2>Detalles para nuestro día</h2><div class="rule">— ❦ —</div>
+<p class="details-intro">Queremos que disfrutes junto a nosotros cada instante de esta celebración. Aquí encontrarás algunos detalles importantes para acompañarnos en este día tan especial.</p></div>
+<div class="info-grid">
+<div class="card reveal detail-card"><div class="detail-symbol">✦</div><h3>Código de vestimenta</h3><p class="detail-main">Estrictamente formal</p><p class="detail-sub">Nos encantará verte lucir elegante para celebrar juntos esta ocasión.</p></div>
+<div class="card reveal detail-card"><div class="detail-symbol">♡</div><h3>Nuestros padrinos</h3><p class="detail-main">Leonardo Pacheco<br><span class="detail-amp">&amp;</span><br>Catalina Faicán</p><p class="detail-sub">Gracias por acompañarnos y ser parte especial de nuestra unión.</p></div>
+<div class="card reveal detail-card"><div class="detail-symbol">✞</div><h3>Con amor y fe</h3><p class="detail-verse">“Lo que Dios ha unido,<br>que no lo separe el hombre.”</p><p class="detail-cite">Mateo 19, 6</p></div>
+</div></section>
 
 
 <section id="detalles-sagrados" class="sacred-details reveal">
@@ -60,7 +151,7 @@ nav a{color:var(--ink);text-decoration:none;font:500 10px Montserrat;letter-spac
     <h2>Amor, fe y promesa</h2>
     <div class="sacred-rule"><span></span>✦<span></span></div>
     <p>Los anillos representan nuestra promesa, la cruz nuestra fe y las espigas la bendición y abundancia que deseamos para nuestro hogar.</p>
-    <img src="assets/amor-fe-promesa.png" alt="Dos anillos de boda, una cruz católica y espigas doradas" loading="lazy">
+    <img src="assets/fe-anillos-elegante.jpg" alt="Dos anillos de boda, una cruz católica y espigas doradas" loading="lazy">
   </div>
 </section>
 <style>
@@ -84,7 +175,10 @@ nav a{color:var(--ink);text-decoration:none;font:500 10px Montserrat;letter-spac
     <p class="gift-lead">Tu presencia es nuestro mejor regalo.</p>
     <p class="gift-copy">Si además deseas tener un detalle con nosotros, puedes hacerlo a través de la siguiente cuenta:</p>
     <div class="bank-card">
-      <div class="bank-name">Banco del Pacífico</div>
+      <div class="bank-brand">
+        <div class="bp-mark" aria-hidden="true">BP</div>
+        <div class="bp-name"><span>Banco</span><strong>del Pacífico</strong></div>
+      </div>
       <div class="bank-line"></div>
       <div class="bank-label">Titular</div>
       <div class="bank-value">Diego Faicán</div>
@@ -123,15 +217,15 @@ document.addEventListener("DOMContentLoaded",function(){
 });
 </script>
 
-<section class="section rsvp" id="rsvp"><div class="heading reveal"><div class="eyebrow">Queremos celebrar contigo</div><h2>Confirma tu asistencia</h2><div class="rule">— ♥ —</div></div>
+<section class="section rsvp" id="rsvp"><div class="heading reveal"><div class="eyebrow">Será un honor compartir este momento contigo</div><h2>Confirma tu asistencia</h2><div class="rule">— ♥ —</div></div>
 <div id="invitacionPersonal" class="guest-box reveal" hidden>
 <div class="guest-flourish">❦</div><div class="guest-kicker">Esta invitación ha sido preparada especialmente para</div>
 <div class="guest-name" id="guestName"></div><div class="guest-divider"><span></span><b>♥</b><span></span></div>
-<div class="guest-intro">Con mucho cariño hemos reservado</div>
+<div class="guest-intro">Con mucho cariño hemos reservado para ti</div>
 <div class="seat-medallion"><div class="seat-number" id="seatNumber"></div><div class="seat-label" id="seatLabel"></div></div>
 <div class="guest-seats" id="guestSeats"></div>
-<div class="guest-note">Agradecemos confirmar únicamente los lugares indicados en esta invitación.</div></div>
-<p class="reveal">Tu presencia hará aún más especial este momento.</p><button class="btn reveal" id="confirmar">Confirmar asistencia</button></section>
+<div class="guest-note">Los lugares indicados han sido reservados especialmente para esta invitación. Te agradecemos confirmar tu asistencia para ayudarnos a preparar cada detalle con mucho cariño.</div></div>
+<p class="rsvp-message reveal">Nos hará muy felices contar contigo. Por favor, confirma tu asistencia mediante el siguiente botón.</p><button class="btn reveal" id="confirmar">Confirmar asistencia</button></section>
 <footer class="footer"><b>N & D</b><p>24 · 10 · 2026</p></footer>
 <script>
 const target=new Date("2026-10-24T16:00:00-05:00").getTime();
