@@ -25,9 +25,16 @@ nav a{color:var(--ink);text-decoration:none;font:500 10px Montserrat;letter-spac
 .count{background:#26382b;color:white;text-align:center}.count .heading h2{color:white}.clock{display:flex;justify-content:center;gap:18px;flex-wrap:wrap}.unit{width:145px;border:1px solid #ffffff55;padding:25px 8px}.num{font-size:52px}.lab{font:400 9px Montserrat;letter-spacing:.16em;text-transform:uppercase;color:#e6d9c3}
 .info-grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{text-align:center;padding:45px 28px;background:var(--paper);border:1px solid #e4d7c2}.card h3{font:500 11px Montserrat;letter-spacing:.25em;text-transform:uppercase}.card p{font-size:19px}
 .rsvp{text-align:center;background:var(--paper)}
-.guest-box{max-width:610px;margin:0 auto 30px;padding:28px 24px;border-block:1px solid var(--line)}
-.guest-name{font:400 43px "Great Vibes";color:var(--green);margin-bottom:8px}
-.guest-seats{font-size:21px;font-style:italic}.rsvp p{font-size:22px;max-width:620px;margin:0 auto 22px}.footer{text-align:center;padding:65px 20px;background:var(--green);color:white}.footer b{display:block;font:400 72px "Great Vibes";color:#dfbd7b}
+.guest-box{position:relative;max-width:650px;margin:0 auto 38px;padding:48px 34px 42px;background:linear-gradient(145deg,#fffdf8,#f7efe1);border:1px solid #d5b77e;box-shadow:0 18px 45px rgba(70,55,35,.11);overflow:hidden}
+.guest-box:before,.guest-box:after{content:"❦";position:absolute;font-size:100px;color:rgba(181,125,42,.09)}
+.guest-box:before{left:-18px;top:-28px;transform:rotate(-35deg)}.guest-box:after{right:-18px;bottom:-28px;transform:rotate(145deg)}
+.guest-flourish{font-size:29px;color:var(--gold);margin-bottom:12px}.guest-kicker{font:500 9px Montserrat;letter-spacing:.24em;text-transform:uppercase;color:#84735e;line-height:1.8}
+.guest-name{font:400 55px "Great Vibes";color:var(--green);margin:14px 0}.guest-divider{display:flex;align-items:center;gap:12px;max-width:220px;margin:0 auto 22px;color:var(--gold)}
+.guest-divider span{height:1px;background:#d5b77e;flex:1}.guest-divider b{font-size:12px}.guest-intro{font-size:20px;font-style:italic;margin-bottom:18px}
+.seat-medallion{width:145px;height:145px;border-radius:50%;margin:0 auto 18px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#fffaf0;border:1px solid #cda761;box-shadow:inset 0 0 0 7px #fffaf0,inset 0 0 0 8px #e5d0a8,0 9px 25px rgba(82,62,32,.11)}
+.seat-number{font:500 65px/.85 "Cormorant Garamond";color:var(--gold)}.seat-label{margin-top:10px;font:500 9px Montserrat;letter-spacing:.22em;color:var(--green)}
+.guest-seats{font-size:23px;color:var(--green);font-weight:600}.guest-note{max-width:470px;margin:18px auto 0;padding-top:17px;border-top:1px solid #dfcfb3;font-size:15px;font-style:italic;color:#786d60;line-height:1.5}
+@media(max-width:600px){.guest-box{padding:40px 20px 35px}.guest-name{font-size:47px}.seat-medallion{width:132px;height:132px}.seat-number{font-size:59px}}.rsvp p{font-size:22px;max-width:620px;margin:0 auto 22px}.footer{text-align:center;padding:65px 20px;background:var(--green);color:white}.footer b{display:block;font:400 72px "Great Vibes";color:#dfbd7b}
 .reveal{opacity:0;transform:translateY(48px);filter:blur(4px);transition:opacity 1.05s ease,transform 1.05s cubic-bezier(.2,.7,.2,1),filter 1.05s}.reveal.show{opacity:1;transform:none;filter:none}
 @media(max-width:800px){nav{display:none}.hero{padding-top:0;grid-template-columns:1fr;min-height:0}.hero-copy{min-height:650px;padding:70px 22px}.hero-media{display:block}.section{padding:80px 22px}.split,.reception-grid,.info-grid{grid-template-columns:1fr;gap:38px}.media-frame{border-radius:150px 150px 10px 10px}.reception-copy{padding:70px 24px}.heading h2{font-size:57px}.names{font-size:90px}.unit{width:44%}}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;filter:none;transition:none}}
@@ -47,7 +54,13 @@ nav a{color:var(--ink);text-decoration:none;font:500 10px Montserrat;letter-spac
 <section class="section" id="detalles"><div class="heading reveal"><div class="eyebrow">Detalles para nuestro día</div><h2>Información</h2><div class="rule">— ❦ —</div></div><div class="info-grid"><div class="card reveal"><h3>Dress code</h3><p><strong>Estrictamente formal</strong></p></div><div class="card reveal"><h3>Padrinos</h3><p><strong>Leonardo Pacheco</strong><br>&<br><strong>Catalina Faicán</strong></p></div><div class="card reveal"><h3>Con amor y fe</h3><p><em>“Lo que Dios ha unido, que no lo separe el hombre.”</em><br>Mateo 19, 6</p></div></div></section>
 
 <section class="section rsvp" id="rsvp"><div class="heading reveal"><div class="eyebrow">Queremos celebrar contigo</div><h2>Confirma tu asistencia</h2><div class="rule">— ♥ —</div></div>
-<div id="invitacionPersonal" class="guest-box reveal" hidden><div class="guest-name" id="guestName"></div><div class="guest-seats" id="guestSeats"></div></div>
+<div id="invitacionPersonal" class="guest-box reveal" hidden>
+<div class="guest-flourish">❦</div><div class="guest-kicker">Esta invitación ha sido preparada especialmente para</div>
+<div class="guest-name" id="guestName"></div><div class="guest-divider"><span></span><b>♥</b><span></span></div>
+<div class="guest-intro">Con mucho cariño hemos reservado</div>
+<div class="seat-medallion"><div class="seat-number" id="seatNumber"></div><div class="seat-label" id="seatLabel"></div></div>
+<div class="guest-seats" id="guestSeats"></div>
+<div class="guest-note">Agradecemos confirmar únicamente los lugares indicados en esta invitación.</div></div>
 <p class="reveal">Tu presencia hará aún más especial este momento.</p><button class="btn reveal" id="confirmar">Confirmar asistencia</button></section>
 <footer class="footer"><b>N & D</b><p>24 · 10 · 2026</p></footer>
 <script>
@@ -69,7 +82,7 @@ const invitados={
   "julio":{nombre:"Julio Timbi y Sra.",cupos:2},
   "veronica":{nombre:"Veronica Ronquillo",cupos:2},
   "luis":{nombre:"Luis Feican",cupos:1},
-
+  "ferandoanita":{nombre:"Fernando y Anita",cupos:2}
 };
 const params=new URLSearchParams(location.search);
 const codigo=(params.get("i")||"").toLowerCase().trim();
@@ -77,6 +90,8 @@ const invitado=invitados[codigo];
 if(invitado){
   const box=document.getElementById("invitacionPersonal");
   document.getElementById("guestName").textContent=invitado.nombre;
+  document.getElementById("seatNumber").textContent=invitado.cupos;
+  document.getElementById("seatLabel").textContent=invitado.cupos===1?"LUGAR":"LUGARES";
   document.getElementById("guestSeats").textContent=invitado.cupos===1
     ?"Hemos reservado 1 lugar para ti."
     :"Hemos reservado "+invitado.cupos+" lugares para ustedes.";
@@ -87,4 +102,44 @@ document.getElementById("confirmar").addEventListener("click",()=>{
   if(invitado) mensaje+="\nInvitación: "+invitado.nombre+".\nLugares reservados: "+invitado.cupos+".";
   window.open("https://wa.me/593992825679?text="+encodeURIComponent(mensaje),"_blank");
 });
-</script></body></html>
+</script>
+<audio id="weddingMusic" preload="auto" loop>
+  <source src="assets/when-a-man-loves-a-woman.mp3" type="audio/mpeg">
+</audio>
+<button id="musicButton" class="music-button" type="button" aria-label="Reproducir música">
+  <span class="music-icon">♫</span><span id="musicText">Música</span>
+</button>
+<style>
+.music-button{position:fixed;right:20px;bottom:20px;z-index:9999;display:flex;align-items:center;gap:9px;padding:12px 18px;border-radius:999px;border:1px solid rgba(190,153,88,.8);background:rgba(255,250,240,.94);color:#53624c;box-shadow:0 8px 28px rgba(45,39,28,.18);font:600 11px Montserrat,Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;backdrop-filter:blur(8px)}
+.music-button:hover{transform:translateY(-2px)}.music-icon{font:400 21px Georgia,serif;color:#b58a43}.music-button.playing .music-icon{animation:musicPulse 1.8s ease-in-out infinite}
+@keyframes musicPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.18)}}
+@media(max-width:600px){.music-button{right:14px;bottom:14px;padding:11px 15px}.music-button #musicText{font-size:9px}}
+</style>
+<script>
+(function(){
+ const music=document.getElementById('weddingMusic');
+ const btn=document.getElementById('musicButton');
+ const text=document.getElementById('musicText');
+ function setState(on){
+   btn.classList.toggle('playing',on);
+   text.textContent=on?'Pausar':'Música';
+   btn.setAttribute('aria-label',on?'Pausar música':'Reproducir música');
+ }
+ btn.addEventListener('click',function(){
+   if(music.paused){music.play().then(()=>setState(true)).catch(()=>setState(false));}
+   else{music.pause();setState(false);}
+ });
+ // Try after the visitor's first interaction, which works better on mobile/iPhone.
+ function firstInteraction(){
+   if(music.paused) music.play().then(()=>setState(true)).catch(()=>{});
+   document.removeEventListener('click',firstInteraction,true);
+   document.removeEventListener('touchstart',firstInteraction,true);
+ }
+ document.addEventListener('click',firstInteraction,true);
+ document.addEventListener('touchstart',firstInteraction,true);
+ music.addEventListener('play',()=>setState(true));
+ music.addEventListener('pause',()=>setState(false));
+})();
+</script>
+
+</body></html>
