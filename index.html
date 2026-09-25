@@ -248,6 +248,13 @@ footer.footer{padding:34px 20px!important}
 .bank-logo-only{display:flex!important;justify-content:center!important;align-items:center!important;margin:0 auto 14px!important}
 .bank-logo-only img{display:block!important;width:76px!important;height:auto!important;object-fit:contain!important}
 .pacifico-symbol,.bp-mark,.bp-name{display:none!important}
+</style><style>
+#musicButton #musicText{white-space:nowrap}
+#musicButton.playing #musicText{letter-spacing:.14em}
+@media(max-width:600px){
+ #musicButton{max-width:calc(100vw - 28px)!important}
+ #musicButton #musicText{font-size:9px!important;white-space:normal;line-height:1.25;text-align:left}
+}
 </style></head><body>
 <div class="petal-layer" aria-hidden="true">
  <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
@@ -419,7 +426,7 @@ document.getElementById("confirmar").addEventListener("click",()=>{
 <audio id="weddingMusic" preload="auto" loop>
   <source src="assets/nuestra-cancion.mp3" type="audio/mpeg">
 </audio>
-<button id="musicButton" class="music-button" type="button" aria-label="Reproducir música">♫ NUESTRA CANCIÓN</button>
+<button id="musicButton" class="music-button" type="button" aria-label="Escuchar nuestra canción"><span class="music-note">♫</span> <span id="musicText">ESCUCHAR NUESTRA CANCIÓN</span></button>
 <style>
 .music-button{position:fixed;right:20px;bottom:20px;z-index:9999;display:flex;align-items:center;gap:9px;padding:12px 18px;border-radius:999px;border:1px solid rgba(190,153,88,.8);background:rgba(255,250,240,.94);color:#53624c;box-shadow:0 8px 28px rgba(45,39,28,.18);font:600 11px Montserrat,Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;backdrop-filter:blur(8px)}
 .music-button:hover{transform:translateY(-2px)}.music-icon{font:400 21px Georgia,serif;color:#b58a43}.music-button.playing .music-icon{animation:musicPulse 1.8s ease-in-out infinite}
@@ -433,8 +440,8 @@ document.getElementById("confirmar").addEventListener("click",()=>{
  const text=document.getElementById('musicText');
  function setState(on){
    btn.classList.toggle('playing',on);
-   text.textContent=on?'Pausar':'Música';
-   btn.setAttribute('aria-label',on?'Pausar música':'Reproducir música');
+   text.textContent=on?'PAUSAR':'ESCUCHAR NUESTRA CANCIÓN';
+   btn.setAttribute('aria-label',on?'Pausar nuestra canción':'Escuchar nuestra canción');
  }
  btn.addEventListener('click',function(){
    if(music.paused){music.play().then(()=>setState(true)).catch(()=>setState(false));}
